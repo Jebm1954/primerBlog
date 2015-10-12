@@ -2,8 +2,21 @@
 	<head>
 		<title>Hola blog</title>
 	</head>
-	<body>	
-	<p>Hi there!</p>
-	<p>It works!</p>
+	<body>
+	<div>
+		<h1><a href="/">djangoboy</a>
+	</h1>
+	
+	{% for post in posts %}
+		<div>
+	
+			<p>published: {{post.published_date}}</p>
+
+		<h1><a href= "">{{ post.tittle}}</a></h1>
+		
+	<p>{{post.text|linebreaks}}</p>
+</div>
+
+{%endfor %}
 	</body>
 </html>
